@@ -1,0 +1,23 @@
+# -----------------------------------------------------------------------------
+# General
+# -----------------------------------------------------------------------------
+
+# Load .bashrc, if available
+if [ -f "$HOME/.bashrc" ]; then
+    #shellcheck source=./.bashrc
+    source "$HOME"/.bashrc
+fi
+
+# -----------------------------------------------------------------------------
+# PATH
+# -----------------------------------------------------------------------------
+
+# Add a user-specific bin path, if available
+if [ -f "$HOME/.bin" ]; then
+    PATH=$PATH:~/.bin
+fi
+
+# Add a rust-specific Cargo bin path, if available
+if [ -f "$HOME/.cargo/bin" ]; then
+    PATH=$PATH:~/.cargo/bin
+fi
