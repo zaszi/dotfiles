@@ -8,16 +8,24 @@ if [ -f "$HOME/.bashrc" ]; then
     source "$HOME"/.bashrc
 fi
 
+# Start tmux, if available, when interactive, not nested and over SSH
+if command -v tmux &> /dev/null && \
+    [[ -n "$PS1" ]] && \
+    [[ -z "$TMUX" ]] && \
+    [[ -n "$SSH_CONNECTION" ]]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # -----------------------------------------------------------------------------
 # PATH
 # -----------------------------------------------------------------------------
 
 # Add a user-specific bin path, if available
-if [ -f "$HOME/.bin" ]; then
+if [ -d "$HOME/.bin" ]; then
     PATH=$PATH:~/.bin
 fi
 
 # Add a rust-specific Cargo bin path, if available
-if [ -f "$HOME/.cargo/bin" ]; then
+if [ -d "$HOME/.cargo/bin" ]; then
     PATH=$PATH:~/.cargo/bin
 fi
