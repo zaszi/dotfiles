@@ -13,11 +13,11 @@ fi
 # -----------------------------------------------------------------------------
 
 # Add a user-specific bin path, if available
-if [ -f "$HOME/.bin" ]; then
+if [ -d "$HOME/.bin" ]; then
     PATH=$PATH:~/.bin
 fi
 
 # Add a rust-specific Cargo bin path, if available
-if [ -f "$HOME/.cargo/bin" ]; then
+if [ -d "$HOME/.cargo/bin" ]; then
     PATH=$PATH:~/.cargo/bin
 fi
