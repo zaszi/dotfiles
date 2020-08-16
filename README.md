@@ -14,6 +14,7 @@ Whether you fork this repository, utilize snippets of my configuration or merely
 
 * [Alacritty](#Alacritty)
 * [Bash](#Bash)
+* [Sway](#Sway)
 * [Tmux](#Tmux)
 
 ### Alacritty
@@ -30,9 +31,18 @@ Alacritty is fast, lightweight and comes with Wayland support out-of-the-box. My
 * **Homepage:** https://www.gnu.org/software/bash/
 * **Description:** The classic, tried-and-true Bourne Again Shell.
 * **Config location:** `~/.bashrc` and `~/.bash_profile`
-* **Dependencies:** All dependencies are optional, but at least [Starship](https://starship.rs/) and its dependencies, and [bash-completion](https://github.com/scop/bash-completion) are recommended.
+* **Dependencies:** All dependencies are optional: [bash-completion](https://github.com/scop/bash-completion), [bat](https://github.com/sharkdp/bat), [curl](https://curl.haxx.se/), [exa](https://github.com/ogham/exa), [firefox](https://www.mozilla.org/en-US/firefox/new/), [fzf](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [gnupg](https://gnupg.org/), [neovim](https://neovim.io/), [openssh](https://www.openssh.com/), [pkgfile](https://github.com/falconindy/pkgfile), [rustup](https://rustup.rs/), [starship](https://starship.rs/), [yay](https://github.com/Jguer/yay)
 
-Bash is the default shell for the majority of distributions and environments. As such, there is significant value in sticking to POSIX as much as possible so my workflow is applicable to most environments where daily work takes me. In a similar vein, you won't find many aliases in here, either. Most reasons for using `zsh` or `fish` (such as a nice prompt) disappear with the use of `starship`. Dependencies on commands are checked so nothing should fail if certain files are missing.
+Bash is the default shell for the majority of distributions and environments. As such, there is significant value in sticking to POSIX as much as possible so my workflow is applicable to most environments where daily work takes me. In a similar vein, you won't find many aliases in here, either. Most reasons for using `zsh` or `fish` (such as a nice prompt) disappear with the use of `starship`. I do use some modern replacements of existing tooling here, but they are set up in such a way they do not depend on learning new workflows or shortcuts. Dependencies on commands are checked so nothing should fail if certain files are missing.
+
+### Sway
+
+* **Homepage:** https://swaywm.org/
+* **Description:** An i3-compatible Wayland compositor.
+* **Config location:** `~/.config/sway/config`
+* **Dependencies:** [alacritty](https://github.com/alacritty/alacritty), [firefox](https://www.mozilla.org/en-US/firefox/new/), [fzf](https://github.com/junegunn/fzf), [grim](https://github.com/emersion/grim), [light](https://github.com/haikarainen/light), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl), [slurp](https://github.com/emersion/slurp), [waybar](https://github.com/Alexays/Waybar), [swaybg](https://github.com/swaywm/swaybg), [swayidle](https://github.com/swaywm/swayidle), [swaylock](https://github.com/swaywm/swaylock)
+
+I prefer using a tiling window manager. Sway being essentially i3 for Wayland, it's been my daily driver ever since I made the switch to a Wayland setup. The configuration file holds a significant amount of shortcuts and utilizes several external tools, so keep in mind my configuration will most likely not work as a drop-in replacement for you unless you install all of the above dependencies. Note that for the backlight to work without privilege escalation, you will also need to install these [udev rules](https://github.com/haikarainen/light/blob/master/90-backlight.rules) and add your user to the `video` group.
 
 ### Tmux
 
