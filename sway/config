@@ -1,0 +1,205 @@
+# -----------------------------------------------------------------------------
+# VARIABLES
+# -----------------------------------------------------------------------------
+
+# Modifier key (Windows key)
+set $mod Mod4
+
+# Vim-like navigation keys
+set $left h
+set $down j
+set $up k
+set $right l
+
+# Terminal emulator
+set $term alacritty
+
+# Custom application launcher
+set $launcher alacritty --class 'launcher' --command bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+
+# Browser (make sure we let Firefox know we're on Wayland)
+set $browser env MOZ_ENABLE_WAYLAND=1 firefox
+
+# Lock screen
+set $lock swaylock --color 000000 --ignore-empty-password --show-failed-attempts
+
+# Timestamped screenshots, for the whole screen or a region
+set $screenshot grim ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+set $screenshot_region grim -g "$(slurp)" ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+
+# Brightness increase and decrease
+set $brightness_up light -A 5 -s sysfs/backlight/intel_backlight
+set $brightness_down light -U 5 -s sysfs/backlight/intel_backlight
+
+# Set wallpaper directory
+set $wallpapers_path $HOME/pictures/wallpapers
+
+# -----------------------------------------------------------------------------
+# OUTPUT
+# -----------------------------------------------------------------------------
+
+# Randomly pick a wallpaper from the wallpaper directory
+output * bg `find $wallpapers_path -type f | shuf -n 1` fill
+
+# -----------------------------------------------------------------------------
+# INPUT
+# -----------------------------------------------------------------------------
+
+# Set keyboard default behavior
+input type:keyboard {
+    xkb_layout us(euro)
+    xkb_numlock enabled
+    repeat_rate 25
+    repeat_delay 200
+}
+
+# Set touchpad default behavior
+input type:touchpad {
+    tap enabled
+    dwt enabled
+    middle_emulation disabled
+    events disabled_on_external_mouse
+}
+
+# -----------------------------------------------------------------------------
+# IDLE
+# -----------------------------------------------------------------------------
+
+# Only lock manually via keybinding
+exec swayidle -w before-sleep '$lock'
+
+# -----------------------------------------------------------------------------
+# LAYOUT
+# -----------------------------------------------------------------------------
+
+# Gruvbox-style color scheme
+client.focused          #fbf1c7 #285577 #ffffff #2e9ef4 #fbf1c7
+client.focused_inactive #fbf1c7 #5f676a #ffffff #484e50 #fbf1c7
+client.unfocused        #fbf1c7 #222222 #888888 #292d2e #fbf1c7
+client.urgent           #fbf1c7 #900000 #ffffff #900000 #fbf1c7
+client.placeholder      #fbf1c7 #0c0c0c #ffffff #000000 #fbf1c7
+
+# Gaps look great
+default_border pixel 1
+gaps inner 8
+gaps outer 8
+
+# We set the clipboard window to floating so there are no jarring popups
+for_window [title="wl-clipboard"] floating enable
+
+# Custom launcher class for a floating sidebar on the left
+for_window [app_id="^launcher$"] floating enable, border none, resize set width 25 ppt height 100 ppt, move position 0 px 0 px
+
+# Set our status bar
+bar {
+    swaybar_command waybar
+}
+
+# -----------------------------------------------------------------------------
+# KEYBINDINGS
+# -----------------------------------------------------------------------------
+
+# Session management
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+# Drag floating windows by holding down $mod and left mouse button.
+# Resize them with right mouse button + $mod.
+# Despite the name, also works for non-floating windows.
+floating_modifier $mod normal
+
+# Navigation
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move the focused window
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Switch to workspaces
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
+
+# Move the focused window to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
+
+# Layout and splits
+bindsym $mod+b splith
+bindsym $mod+v splitv
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# Resizing windows
+mode "resize" {
+    bindsym $left resize shrink width 10 px or 10 ppt
+    bindsym $down resize grow height 10 px or 10 ppt
+    bindsym $up resize shrink height 10 px or 10 ppt
+    bindsym $right resize grow width 10 px or 10 ppt
+
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+# User-defined (see variables section at the top)
+bindsym $mod+Return exec $term
+bindsym $mod+d exec $launcher
+bindsym $mod+x exec $browser
+bindsym $mod+Escape exec $lock
+bindsym Print exec $screenshot
+bindsym $mod+Print exec $screenshot_region
+bindsym $mod+F11 exec $brightness_down
+bindsym $mod+F12 exec $brightness_up
+
+# Custom media keys
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down
+bindsym XF86AudioMute exec pulseaudio-ctl mute
+bindsym XF86AudioStop exec playerctl stop
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
