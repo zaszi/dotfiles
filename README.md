@@ -6,7 +6,7 @@ Zaszi's collection of personal dotfiles and various userland configuration files
 
 This repository contains my dotfiles, which I deploy to my machines using [Ansible](https://www.ansible.com/). I use these dotfiles predominantly on [Arch Linux](https://www.archlinux.org/), a rolling-release distribution. As such, I only support the latest upstream releases of the respective software.
 
-The color scheme I use for most configurations is [Gruvbox (Dark mode)](https://github.com/morhetz/gruvbox).
+The color scheme I use for most configurations is [Gruvbox (Dark mode)](https://github.com/morhetz/gruvbox). Included in every entry here is a list of dependencies. These are not dependencies of the software in question but rather the binaries and libraries that my particular configuration expects.
 
 Whether you fork this repository, utilize snippets of my configuration or merely browse for ideas is up to you. See below for features, screenshots and further documentation.
 
@@ -16,6 +16,7 @@ Whether you fork this repository, utilize snippets of my configuration or merely
 * [Bash](#Bash)
 * [Sway](#Sway)
 * [Tmux](#Tmux)
+* [Waybar](#Waybar)
 
 ### Alacritty
 
@@ -52,6 +53,15 @@ I prefer using a tiling window manager. Sway being essentially i3 for Wayland, i
 * **Dependencies:** None
 
 While I dislike overengineered tmux setups, having a terminal multiplexer at my disposal for detaching sessions and window management in SSH sessions is invaluable. I use a minimal configuration, so there's not much going on here beyond some quality-of-life keybindings and saner defaults.
+
+### Waybar
+
+* **Homepage:** https://github.com/Alexays/Waybar
+* **Description:** A Highly customizable Wayland bar for Sway and Wlroots based compositors.
+* **Config location:** `~/.config/waybar/config` and `~/.config/waybar/style.css`
+* **Dependencies:** [sway](https://swaywm.org/), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
+
+This is a lightweight yet higly-customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery and clock.
 
 ## Contribution
 
