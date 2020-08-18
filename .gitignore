@@ -1,1 +1,4 @@
 ### Dotfiles ###
+
+# Vim/Neovim swap files
+*.swp
