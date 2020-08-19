@@ -57,13 +57,13 @@ fi
 
 # Mimic zsh run-help ability - press ALT+h to open manpage of current command
 run-help() {
-  help "$READLINE_LINE" 2> /dev/null || man "$READLINE_LINE"
+    help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"
 }
 bind -m vi-insert -x '"\eh": run-help'
 bind -m emacs -x '"\eh": run-help'
 
 # Provide SSH compatility for GnuPG token
-if command -v gpg &> /dev/null && command -v ssh &> /dev/null; then
+if command -v gpg &>/dev/null && command -v ssh &>/dev/null; then
     export SSH_AGENT_PID=""
     declare SSH_AUTH_SOCK
     SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
@@ -72,18 +72,18 @@ if command -v gpg &> /dev/null && command -v ssh &> /dev/null; then
         local GPG_TTY
         GPG_TTY=$(tty)
         export GPG_TTY
-        gpg-connect-agent updatestartuptty /bye > /dev/null
+        gpg-connect-agent updatestartuptty /bye >/dev/null
         command ssh "$@"
     }
 fi
 
 # Provide git compatility for GnuPG token
-if command -v gpg &> /dev/null && command -v git &> /dev/null; then
+if command -v gpg &>/dev/null && command -v git &>/dev/null; then
     git() {
         local GPG_TTY
         GPG_TTY=$(tty)
         export GPG_TTY
-        gpg-connect-agent updatestartuptty /bye > /dev/null
+        gpg-connect-agent updatestartuptty /bye >/dev/null
         command git "$@"
     }
 fi
@@ -96,13 +96,13 @@ fi
 umask 0077
 
 # Set neovim as the default editor
-if command -v nvim &> /dev/null; then
+if command -v nvim &>/dev/null; then
     export EDITOR="nvim"
 fi
 
 # We use Wayland, lets make sure Firefox knows
-if command -v firefox &> /dev/null; then
-export MOZ_ENABLE_WAYLAND=1
+if command -v firefox &>/dev/null; then
+    export MOZ_ENABLE_WAYLAND=1
 fi
 
 # We often develop in Rust, a backtrace by default is handy
@@ -115,30 +115,30 @@ fi
 # -----------------------------------------------------------------------------
 
 # Like cat, but with colors and pager, if available
-if command -v bat &> /dev/null; then
+if command -v bat &>/dev/null; then
     alias cat="bat --plain --theme='gruvbox'"
 fi
 
 # An ls with better defaults and colors, if available
-if command -v exa &> /dev/null; then
+if command -v exa &>/dev/null; then
     alias ls="exa"
     alias ll="exa --long --all"
     alias lt="exa --long --all --tree"
 fi
 
 # We use neovim in this household
-if command -v nvim &> /dev/null; then
+if command -v nvim &>/dev/null; then
     alias vi="nvim"
     alias vim="nvim"
 fi
 
 # An interactive AUR installation command using yay
-if command -v yay &> /dev/null && command -v fzf &> /dev/null; then
+if command -v yay &>/dev/null && command -v fzf &>/dev/null; then
     alias fay="yay -Slq | fzf -m --preview 'yay -Si {1}'| xargs -ro yay -S"
 fi
 
 # A paste service that doesn't suck
-if command -v curl &> /dev/null; then
+if command -v curl &>/dev/null; then
     alias pastebin="curl -F'file=@-' 'https://0x0.st'"
 fi
 
@@ -157,6 +157,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Load Starship, if available
 # https://starship.rs/
-if command -v starship &> /dev/null; then
+if command -v starship &>/dev/null; then
     eval "$(starship init bash)"
 fi
