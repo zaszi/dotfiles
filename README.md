@@ -19,6 +19,8 @@ I deploy to my machines using [Ansible](https://www.ansible.com/). My dotfiles a
 
 ### Alacritty
 
+![Alacrity configuration](images/alacritty.png "Alacritty configuration")
+
 - **Homepage:** https://github.com/alacritty/alacritty
 - **Description:** A cross-platform, GPU-accelerated terminal emulator.
 - **Config location:** `~/.config/alacritty`
@@ -28,6 +30,8 @@ Alacritty is fast, lightweight and comes with Wayland support out-of-the-box. My
 
 ### Bash
 
+![Bash configuration](images/bash.png "Bash configuration")
+
 - **Homepage:** https://www.gnu.org/software/bash/
 - **Description:** The classic, tried-and-true Bourne Again Shell.
 - **Config location:** `~/.bashrc` and `~/.bash_profile`
@@ -36,6 +40,8 @@ Alacritty is fast, lightweight and comes with Wayland support out-of-the-box. My
 Bash is the default shell for the majority of distributions and environments. As such, there is significant value in sticking to POSIX as much as possible so my workflow is applicable to most environments where daily work takes me. In a similar vein, you won't find many aliases in here, either. Most reasons for using `zsh` or `fish` (such as a nice prompt) disappear with the use of `starship`. I do use some modern replacements of existing tooling here, but they are set up in such a way they do not depend on learning new shortcuts or flags. Dependencies on commands are checked so nothing should fail if certain dependencies are missing.
 
 ### Neovim
+
+![Neovim configuration](images/neovim.png "Neovim configuration")
 
 - **Homepage:** https://neovim.io/
 - **Description:** A hyperextensible Vim-based text editor.
@@ -62,6 +68,8 @@ I use the following plugins. These are also installed with Ansible directly into
 
 ### Sway
 
+![Sway configuration](images/sway.png "Sway configuration")
+
 - **Homepage:** https://swaywm.org/
 - **Description:** An i3-compatible Wayland compositor.
 - **Config location:** `~/.config/sway/config`
@@ -71,6 +79,8 @@ I prefer using a tiling window manager. Sway being essentially i3 for Wayland, i
 
 ### Tmux
 
+![Tmux configuration](images/tmux.png "Tmux configuration")
+
 - **Homepage:** https://github.com/tmux/tmux
 - **Description:** A terminal multiplexer.
 - **Config location:** `~/.tmux.conf`
@@ -79,6 +89,8 @@ I prefer using a tiling window manager. Sway being essentially i3 for Wayland, i
 While I dislike overengineered tmux setups, having a terminal multiplexer at my disposal for detaching sessions and window management in SSH sessions is invaluable. I use a minimal configuration, so there's not much going on here beyond some quality-of-life keybindings and saner defaults.
 
 ### Waybar
+
+![Waybar configuration](images/waybar.png "Waybar configuration")
 
 - **Homepage:** https://github.com/Alexays/Waybar
 - **Description:** A Highly customizable Wayland bar for Sway and Wlroots based compositors.
