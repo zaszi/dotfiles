@@ -6,7 +6,7 @@ Zaszi's collection of personal dotfiles.
 
 This repository contains my dotfiles. Included in the documentation below is a list of dependencies per configuration. These are not dependencies of the software in question but rather the binaries and libraries that my particular configuration expects. The color scheme used in most configurations is [Gruvbox (Dark mode)](https://github.com/morhetz/gruvbox) and the font is [Iosevka Nerd Font](https://www.nerdfonts.com/).
 
-I deploy to my machines using [Ansible](https://www.ansible.com/). My dotfiles are used redominantly on [Arch Linux](https://www.archlinux.org/), a rolling-release distribution. As such, only the latest stable upstream releases of the respective software is supported.
+I deploy these files to my machines using [Ansible](https://www.ansible.com/) (my Ansible dotfiles role can be found [here](https://github.com/zaszi/ansible-role-dotfiles)). Only the latest stable upstream releases of all respective software is supported.
 
 ## Features
 
@@ -95,9 +95,9 @@ While I dislike overengineered tmux setups, having a terminal multiplexer at my 
 - **Homepage:** https://github.com/Alexays/Waybar
 - **Description:** A Highly customizable Wayland bar for Sway and Wlroots based compositors.
 - **Config location:** `~/.config/waybar/config` and `~/.config/waybar/style.css`
-- **Dependencies:** [sway](https://swaywm.org/), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/)
+- **Dependencies:** [font awesome](https://fontawesome.com/), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/), [sway](https://swaywm.org/)
 
-This is a lightweight yet higly customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery and clock.
+This is a lightweight yet highly customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery and clock. I could not get proper-sized icons to work with the `Iosevka Nerd Font`, so I use `Font Awesome` for waybar.
 
 ## Contribution
 
@@ -105,4 +105,4 @@ Found a problem or have a suggestion? Feel free to open an issue.
 
 ## License
 
-Dotfiles is licensed under the [MIT license](https://github.com/zaszi/rust-template/blob/master/LICENSE.md).
+Dotfiles is licensed under the [MIT license](https://github.com/zaszi/dotfiles/blob/master/LICENSE.md).
