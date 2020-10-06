@@ -228,6 +228,7 @@ let g:ale_fixers = {
     \ 'markdown': ['prettier']
     \ }
 let g:ale_fix_on_save = 1
+let g:ale_rust_rustfmt_options = '--edition 2018'
 
 " fzf.vim
 let g:fzf_layout = { 'down': '~40%' }
