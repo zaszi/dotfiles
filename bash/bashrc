@@ -56,11 +56,13 @@ if [ -f "/usr/share/doc/pkgfile/command-not-found.bash" ]; then
 fi
 
 # Mimic zsh run-help ability - press ALT+h to open manpage of current command
-run-help() {
-    help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"
-}
-bind -m vi-insert -x '"\eh": run-help'
-bind -m emacs -x '"\eh": run-help'
+if [ -n "$PS1" ]; then
+    run-help() {
+        help "$READLINE_LINE" 2>/dev/null || man "$READLINE_LINE"
+    }
+    bind -m vi-insert -x '"\eh": run-help'
+    bind -m emacs -x '"\eh": run-help'
+fi
 
 # Provide SSH compatility for GnuPG token
 if command -v gpg &>/dev/null && command -v ssh &>/dev/null; then
