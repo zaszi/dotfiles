@@ -39,6 +39,19 @@ Alacritty is fast, lightweight and comes with Wayland support out-of-the-box. My
 
 Bash is the default shell for the majority of distributions and environments. As such, there is significant value in sticking to POSIX as much as possible so my workflow is applicable to most environments where daily work takes me. In a similar vein, you won't find many aliases in here, either. Most reasons for using `zsh` or `fish` (such as a nice prompt) disappear with the use of `starship`. I do use some modern replacements of existing tooling here, but they are set up in such a way they do not depend on learning new shortcuts or flags. Dependencies on commands are checked so nothing should fail if certain dependencies are missing.
 
+### Mako
+
+![Mako configuration](images/mako.png "Mako configuration")
+
+- **Homepage:** https://github.com/emersion/mako
+- **Description:** A lightweight notification daemon for Wayland.
+- **Config location:** `~/.config/mako/config`
+- **Dependencies:** None
+
+Mako is a lightweight notification daemon that works on Sway. It has been
+stylles to fit in with the rest of my setup and I've added a timeout so
+notifications don't have to be clicked away.
+
 ### Neovim
 
 ![Neovim configuration](images/neovim.png "Neovim configuration")
