@@ -88,7 +88,7 @@ gaps outer 8
 for_window [title="wl-clipboard"] floating enable
 
 # Custom launcher class for a floating sidebar on the left
-for_window [app_id="^launcher$"] floating enable, border none, resize set width 25 ppt height 100 ppt, move position 0 px 0 px
+for_window [app_id="^launcher$"] floating enable, resize set width 25 ppt height 100 ppt, move position 0 px 0 px
 
 # Set our status bar
 bar {
