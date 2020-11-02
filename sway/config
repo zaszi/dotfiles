@@ -17,8 +17,8 @@ set $term alacritty
 # Custom application launcher
 set $launcher alacritty --class 'launcher' --command bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 
-# Browser (make sure we let Firefox know we're on Wayland)
-set $browser env MOZ_ENABLE_WAYLAND=1 firefox
+# Browser
+set $browser qutebrowser
 
 # Lock screen
 set $lock swaylock --color 000000 --ignore-empty-password --show-failed-attempts

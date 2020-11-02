@@ -79,6 +79,19 @@ I use the following plugins. These are also installed with Ansible directly into
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter.git): Git diffs in the sign column.
 - [vimwiki](https://github.com/vimwiki/vimwiki.git): A personal wiki for Vim.
 
+### Qutebrowser
+
+![Qutebrowser configuration](images/qutebrowser.png "Qutebrowser configuration")
+
+- **Homepage:** https://qutebrowser.org/
+- **Description:** Qutebrowser is a keyboard-focused browser with a minimal GUI.
+- **Config location:** `~/.config/qutebrowser/config.py`
+- **Dependencies:** [pdfjs](https://mozilla.github.io/pdf.js/)
+
+While I've used Firefox for years, there's no denying that there's been questionable decisions on Mozilla's part and the browser itself is not without its fair share of controversy today. Furthermore, Mozilla's lay-offs of 25% of its workforce [1](https://arstechnica.com/information-technology/2020/08/firefox-maker-mozilla-lays-off-250-workers-says-covid-19-lowered-revenue/), raising executive pay 400% as their market share declined 85% [2](http://calpaterson.com/mozilla.html) and doubling down on a losing strategy [3](https://killedbymozilla.com/)[4](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla/) were enough to make me consider an alternative before that ship sinks completely.
+
+Qutebrowser is open-source, lightweight, hackable browser that has vim-like keybindings. It's pretty great. This configuration enforces Qutebrowser's Qt backend to use the Wayland platform. As per usual, there's also the Gruvbox color scheme, Neovim integration, some saner defaults and dark mode.
+
 ### Sway
 
 ![Sway configuration](images/sway.png "Sway configuration")
