@@ -1,4 +1,6 @@
 max-visible=3
 background-color=#1d2021
 text-color=#ebdbb2
+border-color=#ebdbb2
+progress-color=over #d65d0e
 default-timeout=5000
