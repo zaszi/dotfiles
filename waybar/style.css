@@ -7,22 +7,22 @@
 }
 
 window#waybar {
-  background: rgba(40, 40, 40, 0.9);
-  border-bottom: 1px solid rgba(242, 229, 188, 0.9);
-  color: #fbf1c7;
+  background: rgba(29, 32, 33, 0.9);
+  border-bottom: 1px solid rgba(235, 219, 178, 0.9);
+  color: #ebdbb2;
 }
 
 #workspaces button {
   padding: 0 5px;
   background: transparent;
-  color: #fbf1c7;
+  color: #ebdbb2;
   border-bottom: 1px solid transparent;
 }
 
 #workspaces button.focused {
-  background: #fbf1c7;
-  color: #282828;
-  border-bottom: 1px solid #fbf1c7;
+  background: #ebdbb2;
+  color: #1d2021;
+  border-bottom: 1px solid #ebdbb2;
 }
 
 #cpu,
@@ -46,15 +46,15 @@ window#waybar {
 
 @keyframes blink {
   to {
-    background-color: #282828;
-    color: #fbf1c7;
+    background-color: #1d2021;
+    color: #ebdbb2;
   }
 }
 
 #battery.critical:not(.charging) {
   background: #cc241d;
-  color: #fbf1c7;
-  border-bottom: 1px solid #fbf1c7;
+  color: #ebdbb2;
+  border-bottom: 1px solid #ebdbb2;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
