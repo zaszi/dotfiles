@@ -4,7 +4,7 @@ Zaszi's collection of personal dotfiles.
 
 ## Usage
 
-This repository contains my dotfiles. Included in the documentation below is a list of dependencies per configuration. These are not dependencies of the software in question but rather the binaries and libraries that my particular configuration expects. The color scheme used in most configurations is [Gruvbox (Dark mode)](https://github.com/morhetz/gruvbox) and the font is [Iosevka Nerd Font](https://www.nerdfonts.com/).
+This repository contains my dotfiles. Included in the documentation below is a list of dependencies per configuration. These are not dependencies of the software in question but rather the binaries and libraries that my particular configuration expects. The color scheme used in most configurations is [Gruvbox (Dark mode - Hard contrast)](https://github.com/morhetz/gruvbox) and the font is [Iosevka Nerd Font](https://www.nerdfonts.com/).
 
 I deploy these files to my machines using [Ansible](https://www.ansible.com/) (my Ansible dotfiles role can be found [here](https://github.com/zaszi/ansible-role-dotfiles)). Only the latest stable upstream releases of all respective software is supported.
 
@@ -12,7 +12,9 @@ I deploy these files to my machines using [Ansible](https://www.ansible.com/) (m
 
 - [Alacritty](#Alacritty)
 - [Bash](#Bash)
+- [Mako](#Mako)
 - [Neovim](#Neovim)
+- [Qutebrowser](#Qutebrowser)
 - [Sway](#Sway)
 - [Tmux](#Tmux)
 - [Waybar](#Waybar)
@@ -37,7 +39,7 @@ Alacritty is fast, lightweight and comes with Wayland support out-of-the-box. My
 - **Config location:** `~/.bashrc` and `~/.bash_profile`
 - **Dependencies:** All dependencies are optional: [bash-completion](https://github.com/scop/bash-completion), [bat](https://github.com/sharkdp/bat), [curl](https://curl.haxx.se/), [exa](https://github.com/ogham/exa), [firefox](https://www.mozilla.org/en-US/firefox/new/), [fzf](https://github.com/junegunn/fzf), [git](https://git-scm.com/), [gnupg](https://gnupg.org/), [neovim](https://neovim.io/), [openssh](https://www.openssh.com/), [pkgfile](https://github.com/falconindy/pkgfile), [rustup](https://rustup.rs/), [starship](https://starship.rs/), [yay](https://github.com/Jguer/yay)
 
-Bash is the default shell for the majority of distributions and environments. As such, there is significant value in sticking to POSIX as much as possible so my workflow is applicable to most environments where daily work takes me. In a similar vein, you won't find many aliases in here, either. Most reasons for using `zsh` or `fish` (such as a nice prompt) disappear with the use of `starship`. I do use some modern replacements of existing tooling here, but they are set up in such a way they do not depend on learning new shortcuts or flags. Dependencies on commands are checked so nothing should fail if certain dependencies are missing.
+Bash is the default shell for the majority of distributions and environments. As such, there is significant value in sticking to POSIX as much as possible so my workflow is applicable to most environments where daily work takes me. In a similar vein, you won't find many aliases in here, either. Most reasons for using `zsh` or `fish` (such as a nice prompt) disappear with the use of `starship`. I do use some modern replacements of existing tooling here, but they are set up in such a way they do not depend on learning new shortcuts or flags. Dependencies on commands are checked so nothing should fail if certain binaries are missing.
 
 ### Mako
 
@@ -49,7 +51,7 @@ Bash is the default shell for the majority of distributions and environments. As
 - **Dependencies:** None
 
 Mako is a lightweight notification daemon that works on Sway. It has been
-stylles to fit in with the rest of my setup and I've added a timeout so
+styled to fit in with the rest of my setup and I've added a timeout so
 notifications don't have to be clicked away.
 
 ### Neovim
@@ -61,7 +63,7 @@ notifications don't have to be clicked away.
 - **Config location:** `~/.config/nvim/init.vim`
 - **Dependencies:** [prettier](https://github.com/prettier/prettier), [proselint](https://github.com/amperser/proselint), [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer), [shfmt](https://github.com/mvdan/sh), [wl-clipboard](https://github.com/bugaevc/wl-clipboard), in addition to the plugins listed below.
 
-Since I spend a lot of my days on environments with no graphical interface, Neovim (and Vim) are my bread and butter. As I kept struggling with trying to make various IDEs more Vim-like, I ended up going the other way around and making Neovim more like an IDE. This lets me keep all the benefits and workflows of a vim-like editor, yet also have the few IDE-specific tools (such as a project drawer and linting) when I need them. Despite the size of this configuration, I try to keep custom keybindings and plugins to a minimum and mostly try to improve what is already there.
+Since I spend a lot of my days on environments with no graphical interface, (Neo)vim is my bread and butter. As I kept struggling with trying to make various IDEs more Vim-like, I ended up going the other way around and making Neovim more like an IDE. This lets me keep all the benefits and workflows of a vim-like editor, yet also have the few IDE-specific tools (such as a project drawer and linting) when I need them. Despite the size of this configuration, I try to keep custom keybindings and plugins to a minimum and mostly try to improve what is already there.
 
 I use the following plugins. These are also installed with Ansible directly into `~/.config/nvim/pack/plugin/start`, using Neovim's native package loader.
 
@@ -88,7 +90,7 @@ I use the following plugins. These are also installed with Ansible directly into
 - **Config location:** `~/.config/qutebrowser/config.py`
 - **Dependencies:** [pdfjs](https://mozilla.github.io/pdf.js/)
 
-While I've used Firefox for years, there's no denying that there's been questionable decisions on Mozilla's part and the browser itself is not without its fair share of controversy today. Furthermore, Mozilla's lay-offs of 25% of its workforce [1](https://arstechnica.com/information-technology/2020/08/firefox-maker-mozilla-lays-off-250-workers-says-covid-19-lowered-revenue/), raising executive pay 400% as their market share declined 85% [2](http://calpaterson.com/mozilla.html) and doubling down on a losing strategy [3](https://killedbymozilla.com/)[4](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla/) were enough to make me consider an alternative before that ship sinks completely.
+While I've used Firefox for years, there's no denying that there's been questionable decisions on Mozilla's part and the browser itself is not without its fair share of controversy today. Furthermore, Mozilla's lay-offs of 25% of its workforce [[1]](https://arstechnica.com/information-technology/2020/08/firefox-maker-mozilla-lays-off-250-workers-says-covid-19-lowered-revenue/), raising executive pay 400% as their market share declined 85% [[2]](http://calpaterson.com/mozilla.html) and doubling down on a losing strategy [[3]](https://killedbymozilla.com/)[[4]](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla/) were enough to make me consider an alternative before that ship sinks completely.
 
 Qutebrowser is open-source, lightweight, hackable browser that has vim-like keybindings. It's pretty great. This configuration enforces Qutebrowser's Qt backend to use the Wayland platform. As per usual, there's also the Gruvbox color scheme, Neovim integration, some saner defaults and dark mode.
 
