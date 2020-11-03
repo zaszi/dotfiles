@@ -21,7 +21,7 @@ I deploy these files to my machines using [Ansible](https://www.ansible.com/) (m
 
 ### Alacritty
 
-![Alacrity configuration](images/alacritty.png "Alacritty configuration")
+![Alacrity configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/alacritty.png "Alacritty configuration")
 
 - **Homepage:** https://github.com/alacritty/alacritty
 - **Description:** A cross-platform, GPU-accelerated terminal emulator.
@@ -32,7 +32,7 @@ Alacritty is fast, lightweight and comes with Wayland support out-of-the-box. My
 
 ### Bash
 
-![Bash configuration](images/bash.png "Bash configuration")
+![Bash configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/bash.png "Bash configuration")
 
 - **Homepage:** https://www.gnu.org/software/bash/
 - **Description:** The classic, tried-and-true Bourne Again Shell.
@@ -43,7 +43,7 @@ Bash is the default shell for the majority of distributions and environments. As
 
 ### Mako
 
-![Mako configuration](images/mako.png "Mako configuration")
+![Mako configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/mako.png "Mako configuration")
 
 - **Homepage:** https://github.com/emersion/mako
 - **Description:** A lightweight notification daemon for Wayland.
@@ -56,7 +56,7 @@ notifications don't have to be clicked away.
 
 ### Neovim
 
-![Neovim configuration](images/neovim.png "Neovim configuration")
+![Neovim configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/neovim.png "Neovim configuration")
 
 - **Homepage:** https://neovim.io/
 - **Description:** A hyperextensible Vim-based text editor.
@@ -83,20 +83,20 @@ I use the following plugins. These are also installed with Ansible directly into
 
 ### Qutebrowser
 
-![Qutebrowser configuration](images/qutebrowser.png "Qutebrowser configuration")
+![Qutebrowser configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/qutebrowser.png "Qutebrowser configuration")
 
 - **Homepage:** https://qutebrowser.org/
 - **Description:** Qutebrowser is a keyboard-focused browser with a minimal GUI.
 - **Config location:** `~/.config/qutebrowser/config.py`
 - **Dependencies:** [pdfjs](https://mozilla.github.io/pdf.js/)
 
-While I've used Firefox for years, there's no denying that there's been questionable decisions on Mozilla's part and the browser itself is not without its fair share of controversy today. Furthermore, Mozilla's lay-offs of 25% of its workforce [[1]](https://arstechnica.com/information-technology/2020/08/firefox-maker-mozilla-lays-off-250-workers-says-covid-19-lowered-revenue/), raising executive pay 400% as their market share declined 85% [[2]](http://calpaterson.com/mozilla.html) and doubling down on a losing strategy [[3]](https://killedbymozilla.com/)[[4]](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla/) were enough to make me consider an alternative before that ship sinks completely.
+While I've used Firefox for years, there's no denying that there's been questionable decisions on Mozilla's part and the browser itself is not without its fair share of controversy today. Furthermore, Mozilla's lay-offs of 25% of its workforce <sup>[[1]](https://arstechnica.com/information-technology/2020/08/firefox-maker-mozilla-lays-off-250-workers-says-covid-19-lowered-revenue/)</sup>, raising executive pay 400% as their market share declined 85% <sup>[[2]](http://calpaterson.com/mozilla.html)</sup> and doubling down on a losing strategy <sup>[[3]](https://killedbymozilla.com/)[[4]](https://blog.mozilla.org/blog/2020/08/11/changing-world-changing-mozilla/)</sup> were enough to make me consider an alternative before that ship sinks completely.
 
 Qutebrowser is open-source, lightweight, hackable browser that has vim-like keybindings. It's pretty great. This configuration enforces Qutebrowser's Qt backend to use the Wayland platform. As per usual, there's also the Gruvbox color scheme, Neovim integration, some saner defaults and dark mode.
 
 ### Sway
 
-![Sway configuration](images/sway.png "Sway configuration")
+![Sway configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/sway.png "Sway configuration")
 
 - **Homepage:** https://swaywm.org/
 - **Description:** An i3-compatible Wayland compositor.
@@ -107,7 +107,7 @@ I prefer using a tiling window manager. Sway being essentially i3 for Wayland, i
 
 ### Tmux
 
-![Tmux configuration](images/tmux.png "Tmux configuration")
+![Tmux configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/tmux.png "Tmux configuration")
 
 - **Homepage:** https://github.com/tmux/tmux
 - **Description:** A terminal multiplexer.
@@ -118,7 +118,7 @@ While I dislike overengineered tmux setups, having a terminal multiplexer at my 
 
 ### Waybar
 
-![Waybar configuration](images/waybar.png "Waybar configuration")
+![Waybar configuration](https://raw.githubusercontent.com/zaszi/dotfiles/master/screenshots/waybar.png "Waybar configuration")
 
 - **Homepage:** https://github.com/Alexays/Waybar
 - **Description:** A Highly customizable Wayland bar for Sway and Wlroots based compositors.
