@@ -87,8 +87,8 @@ gaps outer 8
 # We set the clipboard window to floating so there are no jarring popups
 for_window [title="wl-clipboard"] floating enable
 
-# Custom launcher class for a floating sidebar on the left
-for_window [app_id="^launcher$"] floating enable, resize set width 25 ppt height 100 ppt, move position 0 px 0 px
+# Custom class for a central floating application launcher
+for_window [app_id="^launcher$"] floating enable, resize set width 25 ppt height 25 ppt
 
 # Set our status bar
 bar {
