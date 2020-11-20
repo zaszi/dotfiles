@@ -124,8 +124,8 @@ fi
 # An ls with better defaults and colors, if available
 if command -v exa &>/dev/null; then
     alias ls="exa"
-    alias ll="exa --long --all"
-    alias lt="exa --long --all --tree"
+    alias ll="exa --all --long -group"
+    alias lt="exa --all --tree"
 fi
 
 # We use neovim in this household
