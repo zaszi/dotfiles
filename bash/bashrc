@@ -64,6 +64,19 @@ if [ -n "$PS1" ]; then
     bind -m emacs -x '"\eh": run-help'
 fi
 
+# Provide pass compatility for GnuPG token
+if command -v gpg &>/dev/null && command -v pass &>/dev/null; then
+    pass() {
+        local GPG_TTY
+        GPG_TTY=$(tty)
+        export GPG_TTY
+        gpg-connect-agent updatestartuptty /bye >/dev/null
+        # Workaround for GnuPG bug preventing pinentry from showing up
+        gpg --card-status >/dev/null
+        command pass "$@"
+    }
+fi
+
 # Provide SSH compatility for GnuPG token
 if command -v gpg &>/dev/null && command -v ssh &>/dev/null; then
     export SSH_AGENT_PID=""
