@@ -133,4 +133,4 @@ Found a problem or have a suggestion? Feel free to open an issue.
 
 ## License
 
-Dotfiles is licensed under the [MIT license](https://github.com/zaszi/dotfiles/blob/master/LICENSE.md).
+Dotfiles is licensed under the [MIT license](https://github.com/zaszi/dotfiles/blob/master/LICENSE).
