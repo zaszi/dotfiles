@@ -79,7 +79,6 @@ I use the following plugins. These are also installed with Ansible directly into
 - [supertab](https://github.com/ervandew/supertab.git): Use tabs for insert completions.
 - [vim-devicons](https://github.com/ryanoasis/vim-devicons.git): Icons for Nerdtree.
 - [vim-gitgutter](https://github.com/airblade/vim-gitgutter.git): Git diffs in the sign column.
-- [vimwiki](https://github.com/vimwiki/vimwiki.git): A personal wiki for Vim.
 
 ### Qutebrowser
 
@@ -101,7 +100,7 @@ Qutebrowser is open-source, lightweight, hackable browser that has vim-like keyb
 - **Homepage:** https://swaywm.org/
 - **Description:** An i3-compatible Wayland compositor.
 - **Config location:** `~/.config/sway/config`
-- **Dependencies:** [alacritty](https://github.com/alacritty/alacritty), [firefox](https://www.mozilla.org/en-US/firefox/new/), [fzf](https://github.com/junegunn/fzf), [grim](https://github.com/emersion/grim), [light](https://github.com/haikarainen/light), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl), [slurp](https://github.com/emersion/slurp), [waybar](https://github.com/Alexays/Waybar), [swaybg](https://github.com/swaywm/swaybg), [swayidle](https://github.com/swaywm/swayidle), [swaylock](https://github.com/swaywm/swaylock)
+- **Dependencies:** [alacritty](https://github.com/alacritty/alacritty), [fzf](https://github.com/junegunn/fzf), [grim](https://github.com/emersion/grim), [light](https://github.com/haikarainen/light), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio-ctl](https://github.com/graysky2/pulseaudio-ctl), [qutebrowser](https://qutebrowser.org/), [slurp](https://github.com/emersion/slurp), [waybar](https://github.com/Alexays/Waybar), [swaybg](https://github.com/swaywm/swaybg), [swayidle](https://github.com/swaywm/swayidle), [swaylock](https://github.com/swaywm/swaylock)
 
 I prefer using a tiling window manager. Sway being essentially i3 for Wayland, it's been my daily driver ever since I made the switch to a Wayland setup. The configuration file holds a significant amount of shortcuts and utilizes several external tools, so keep in mind my configuration will most likely not work as a drop-in replacement for you unless you install all of the above dependencies. Note that for the backlight to work without privilege escalation, you will also need to install these [udev rules](https://github.com/haikarainen/light/blob/master/90-backlight.rules) and add your user to the `video` group.
 
