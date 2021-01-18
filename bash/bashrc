@@ -115,11 +115,6 @@ if command -v nvim &>/dev/null; then
     export EDITOR="nvim"
 fi
 
-# We use Wayland, lets make sure Firefox knows
-if command -v firefox &>/dev/null; then
-    export MOZ_ENABLE_WAYLAND=1
-fi
-
 # We often develop in Rust, a backtrace by default is handy
 if [ -f "$HOME/.cargo/bin" ]; then
     export RUST_BACKTRACE=1
