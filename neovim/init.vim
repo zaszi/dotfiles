@@ -176,6 +176,9 @@ tnoremap <Esc> <C-\><C-n>
 " Easily close a buffer but not the window
 nmap <Leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 
+" Toggle spell checking
+nn <F7> :setlocal spell! spell?<CR>
+
 " ALE
 nmap <Leader>d :ALEGoToDefinition<CR>
 nmap <Leader>r :ALEFindReferences<CR>
