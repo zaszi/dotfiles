@@ -232,6 +232,11 @@ let g:ale_fixers = {
     \ }
 let g:ale_fix_on_save = 1
 let g:ale_rust_rustfmt_options = '--edition 2018'
+let g:ale_rust_analyzer_config = {
+    \ 'cargo': { 'loadOutDirsFromCheck': v:true },
+    \ 'procMacro': { 'enable': v:true },
+    \ 'checkOnSave': { 'command': 'clippy', 'enable': v:true }
+    \ }
 
 " fzf.vim
 let g:fzf_layout = { 'down': '~40%' }
