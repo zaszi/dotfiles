@@ -126,7 +126,7 @@ fi
 
 # Like cat, but with colors and pager, if available
 if command -v bat &>/dev/null; then
-    alias cat="bat --plain --theme='gruvbox'"
+    alias cat="bat --plain --theme='gruvbox-dark'"
 fi
 
 # An ls with better defaults and colors, if available
