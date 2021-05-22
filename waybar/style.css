@@ -31,7 +31,8 @@ window#waybar {
 #network,
 #battery,
 #clock,
-#custom-playerctl {
+#custom-playerctl,
+#temperature {
   padding: 0 10px;
   margin: 0 5px;
 }
@@ -52,6 +53,17 @@ window#waybar {
 }
 
 #battery.critical:not(.charging) {
+  background: #cc241d;
+  color: #ebdbb2;
+  border-bottom: 1px solid #ebdbb2;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#temperature.critical {
   background: #cc241d;
   color: #ebdbb2;
   border-bottom: 1px solid #ebdbb2;
