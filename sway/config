@@ -14,6 +14,9 @@ set $right l
 # Terminal emulator
 set $term alacritty
 
+# Editor
+set $editor neovide
+
 # Custom application launcher
 set $launcher alacritty --class 'launcher' --command bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 
@@ -195,6 +198,7 @@ bindsym $mod+r mode "resize"
 
 # User-defined (see variables section at the top)
 bindsym $mod+Return exec $term
+bindsym $mod+Shift+Return exec $editor
 bindsym $mod+d exec $launcher
 bindsym $mod+x exec $browser
 bindsym $mod+Escape exec $lock
