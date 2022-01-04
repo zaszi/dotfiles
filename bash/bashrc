@@ -152,6 +152,11 @@ if command -v curl &>/dev/null; then
     alias pastebin="curl -F'file=@-' 'https://0x0.st'"
 fi
 
+# Password store for work
+if command -v pass &>/dev/null; then
+    alias passwork="PASSWORD_STORE_DIR=~/documents/work/password-store pass"
+fi
+
 # -----------------------------------------------------------------------------
 # PROMPT AND COLORS
 # -----------------------------------------------------------------------------
