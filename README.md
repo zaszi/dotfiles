@@ -122,9 +122,9 @@ While I dislike overengineered tmux setups, having a terminal multiplexer at my 
 - **Homepage:** https://github.com/Alexays/Waybar
 - **Description:** A Highly customizable Wayland bar for Sway and Wlroots based compositors.
 - **Config location:** `~/.config/waybar/config` and `~/.config/waybar/style.css`
-- **Dependencies:** [font awesome](https://fontawesome.com/), [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/), [sway](https://swaywm.org/)
+- **Dependencies:** [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/), [sway](https://swaywm.org/)
 
-This is a lightweight yet highly customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery and clock. I could not get proper-sized icons to work with the `Iosevka Nerd Font`, so I use `Font Awesome` for waybar.
+This is a lightweight yet highly customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery and clock.
 
 ## Contribution
 
