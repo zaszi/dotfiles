@@ -1,28 +1,28 @@
 * {
-  border: none;
-  border-radius: 0;
-  font-family: "Font Awesome 5 Free";
-  font-size: 16px;
-  min-height: 0;
+    border: none;
+    border-radius: 0;
+    font-family: "Font Awesome 5 Free";
+    font-size: 16px;
+    min-height: 0;
 }
 
 window#waybar {
-  background: rgba(29, 32, 33, 0.9);
-  border-bottom: 1px solid rgba(235, 219, 178, 0.9);
-  color: #ebdbb2;
+    background: rgba(29, 32, 33, 0.9);
+    border-bottom: 1px solid rgba(235, 219, 178, 0.9);
+    color: #ebdbb2;
 }
 
 #workspaces button {
-  padding: 0 5px;
-  background: transparent;
-  color: #ebdbb2;
-  border-bottom: 1px solid transparent;
+    padding: 0 5px;
+    background: transparent;
+    color: #ebdbb2;
+    border-bottom: 1px solid transparent;
 }
 
 #workspaces button.focused {
-  background: #ebdbb2;
-  color: #1d2021;
-  border-bottom: 1px solid #ebdbb2;
+    background: #ebdbb2;
+    color: #1d2021;
+    border-bottom: 1px solid #ebdbb2;
 }
 
 #cpu,
@@ -33,51 +33,51 @@ window#waybar {
 #clock,
 #custom-playerctl,
 #temperature {
-  padding: 0 10px;
-  margin: 0 5px;
+    padding: 0 10px;
+    margin: 0 5px;
 }
 
 #battery.charging {
-  color: #689d6a;
+    color: #689d6a;
 }
 
 #battery.warning:not(.charging) {
-  color: #d79921;
+    color: #d79921;
 }
 
 @keyframes blink {
-  to {
-    background-color: #1d2021;
-    color: #ebdbb2;
-  }
+    to {
+        background-color: #1d2021;
+        color: #ebdbb2;
+    }
 }
 
 #battery.critical:not(.charging) {
-  background: #cc241d;
-  color: #ebdbb2;
-  border-bottom: 1px solid #ebdbb2;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    background: #cc241d;
+    color: #ebdbb2;
+    border-bottom: 1px solid #ebdbb2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #temperature.critical {
-  background: #cc241d;
-  color: #ebdbb2;
-  border-bottom: 1px solid #ebdbb2;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    background: #cc241d;
+    color: #ebdbb2;
+    border-bottom: 1px solid #ebdbb2;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 #network.disconnected {
-  color: #cc241d;
+    color: #cc241d;
 }
 
 #pulseaudio.muted {
-  color: #cc241d;
+    color: #cc241d;
 }
