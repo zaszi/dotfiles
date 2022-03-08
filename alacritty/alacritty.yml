@@ -41,4 +41,8 @@ colors:
     white: "0xebdbb2"
 
 window:
+  padding:
+    x: 10
+    y: 10
+  dynamic_padding: true
   opacity: 0.9
