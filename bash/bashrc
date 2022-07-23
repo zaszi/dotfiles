@@ -124,6 +124,10 @@ fi
 # ALIASES
 # -----------------------------------------------------------------------------
 
+# Make aliases work under sudo.
+# https://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
+alias sudo='sudo '
+
 # Like cat, but with colors and pager, if available
 if command -v bat &>/dev/null; then
     alias cat="bat --plain --theme='gruvbox-dark'"
