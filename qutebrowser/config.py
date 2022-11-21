@@ -428,3 +428,8 @@ c.colors.webpage.darkmode.enabled = True
 ##   - light: Force a light theme.
 ##   - dark: Force a dark theme.
 c.colors.webpage.preferred_color_scheme = 'dark'
+
+# Set the default background color to gruvbox bg_h color. This is then
+# overwritten by the whiteflash.user.js greasemonkey script, stopping the
+# white flash upon pageload and tab switches almost entirely.
+c.colors.webpage.bg = '#1d2021'
