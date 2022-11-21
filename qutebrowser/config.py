@@ -433,3 +433,7 @@ c.colors.webpage.preferred_color_scheme = 'dark'
 # overwritten by the whiteflash.user.js greasemonkey script, stopping the
 # white flash upon pageload and tab switches almost entirely.
 c.colors.webpage.bg = '#1d2021'
+
+# Block Reddit promoted ads, in absence of cosmetic content filtering 
+# support.
+c.content.user_stylesheets = ['reddit_block_promoted.css']
