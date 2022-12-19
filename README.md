@@ -60,25 +60,12 @@ notifications don't have to be clicked away.
 
 - **Homepage:** https://neovim.io/
 - **Description:** A hyperextensible Vim-based text editor.
-- **Config location:** `~/.config/nvim/init.vim`
-- **Dependencies:** [prettier](https://github.com/prettier/prettier), [proselint](https://github.com/amperser/proselint), [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer), [shfmt](https://github.com/mvdan/sh), [wl-clipboard](https://github.com/bugaevc/wl-clipboard), in addition to the plugins listed below.
+- **Config location:** `~/.config/nvim/`
+- **Dependencies:** Almost all are for LSP and formatting languages that I personally use: [ansible-lint](https://github.com/ansible/ansible-lint), [bash-language-server](https://github.com/bash-lsp/bash-language-server), [glow](https://github.com/charmbracelet/glow), [lua-language-server](https://github.com/sumneko/lua-language-server), [prettier](https://github.com/prettier/prettier), [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer), [shfmt](https://github.com/mvdan/sh), [stylua](https://github.com/JohnnyMorganz/StyLua), [wl-clipboard](https://github.com/bugaevc/wl-clipboard), [yamllint](https://github.com/adrienverge/yamllint), [yaml-language-server](https://github.com/redhat-developer/yaml-language-server).
 
 Since I spend a lot of my days on environments with no graphical interface, (Neo)vim is my bread and butter. As I kept struggling with trying to make various IDEs more Vim-like, I ended up going the other way around and making Neovim more like an IDE. This lets me keep all the benefits and workflows of a vim-like editor, yet also have the few IDE-specific tools (such as a project drawer and linting) when I need them. Despite the size of this configuration, I try to keep custom keybindings and plugins to a minimum and mostly try to improve what is already there.
 
-I use the following plugins. These are also installed with Ansible directly into `~/.config/nvim/pack/plugin/start`, using Neovim's native package loader.
-
-- [ale](https://github.com/w0rp/ale.git): Asynchronous Lint Engine.
-- [auto-pairs](https://github.com/jiangmiao/auto-pairs.git): Insert or delete brackets, parens, quotes in pair.
-- [fzf.vim](https://github.com/junegunn/fzf.vim.git): Wrapper for fzf, the command-line fuzzy finder.
-- [gruvbox](https://github.com/morhetz/gruvbox.git): The Gruvbox color scheme.
-- [lightline.vim](https://github.com/itchyny/lightline.vim.git): A light and configurable statusline/tabline plugin.
-- [lightline-ale](https://github.com/maximbaz/lightline-ale.git): An ALE indicator for lightline.
-- [nerdtree](https://github.com/scrooloose/nerdtree.git): A file system explorer and project drawer.
-- [nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin.git): A Nerdtree plugin showing git status flags.
-- [ron-rs](https://github.com/ron-rs/ron.vim.git): Syntax highlighting for RON (Rusty Object Notation) files.
-- [supertab](https://github.com/ervandew/supertab.git): Use tabs for insert completions.
-- [vim-devicons](https://github.com/ryanoasis/vim-devicons.git): Icons for Nerdtree.
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter.git): Git diffs in the sign column.
+I made a full lua-based configuration. Additional plugins are installed with [Packer](https://github.com/wbthomason/packer.nvim), along with their respective dependencies. Simply run the `:PackerSync` command from within Neovim to download and initialize everything after dotfile installation.
 
 ### Qutebrowser
 
