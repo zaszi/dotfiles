@@ -23,6 +23,7 @@ vim.g.loaded_zipPlugin = false
 vim.g.loaded_2html_plugin = false
 vim.g.loaded_remote_plugins = false
 
+-- Execute these as soon as the event loop frees up.
 vim.defer_fn(function()
     -- Load core configuration (no plugin dependencies).
     require("core/general")
@@ -47,7 +48,6 @@ vim.defer_fn(function()
     require("extra/popui")
     require("extra/nvim-cmp")
     require("extra/gitsigns")
-    require("extra/nvim-tree")
     require("extra/indent-blankline")
     require("extra/which-key")
     require("extra/bufferline")
@@ -61,4 +61,12 @@ vim.defer_fn(function()
     filetype on
     filetype plugin indent on
   ]])
+
+    -- We map this here instead of in extra/nvim-tree because it is dependent
+    -- on the map function in core/keymap, which is loaded after nvim-tree.
+    map("n", "<Leader>t", ":NvimTreeToggle<CR>")
 end, 0)
+
+-- We do not defer loading nvim-tree (this executes before the above plugin
+-- loads) due to a race condition with nvim-tree opening conditions.
+require("extra/nvim-tree")
