@@ -216,4 +216,5 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 
-# Host-specific configuration
+# Host-specific configuration - Deploy with Ansible
+{{ sway_host_config }}
