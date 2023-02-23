@@ -37,8 +37,8 @@ require("lspconfig").bashls.setup({})
 -- rust-tools loads this for us, so we comment it out here.
 --require("lspconfig").rust_analyzer.setup({})
 
--- sumneko_lua - Lua Language Server
-require("lspconfig").sumneko_lua.setup({
+-- LuaLS - Lua Language Server
+require("lspconfig").lua_ls.setup({
     settings = {
         Lua = {
             runtime = {

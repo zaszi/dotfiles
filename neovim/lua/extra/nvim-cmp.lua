@@ -114,7 +114,7 @@ cmp.setup({
 -- Integrate language servers set up with lspconfig.
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 local lspconfig = require("lspconfig")
-local servers = { "ansiblels", "bashls", "sumneko_lua", "yamlls" }
+local servers = { "ansiblels", "bashls", "lua_ls", "yamlls" }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup({
