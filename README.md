@@ -111,7 +111,7 @@ While I dislike overengineered tmux setups, having a terminal multiplexer at my 
 - **Config location:** `~/.config/waybar/config` and `~/.config/waybar/style.css`
 - **Dependencies:** [playerctl](https://github.com/altdesktop/playerctl), [pulseaudio](https://www.freedesktop.org/wiki/Software/PulseAudio/), [sway](https://swaywm.org/)
 
-This is a lightweight yet highly customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery and clock.
+This is a lightweight yet highly customizable status bar that works perfectly with Sway. My configuration comes with the usual suspects that you'd want in a status bar. From left-to-right: workspaces, current music track, window name, RAM usage, CPU usage, volume, network, battery, program tray and clock.
 
 ## Contribution
 
