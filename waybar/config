@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["sway/workspaces", "custom/playerctl"],
   "modules-center": ["sway/window"],
-  "modules-right": ["cpu", "memory", "pulseaudio", "network", "battery", "temperature", "tray", "clock"],
+  "modules-right": ["cpu", "memory", "pulseaudio", "network", "battery", "tray", "clock"],
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
@@ -74,11 +74,5 @@
     "interval": 5,
     "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
     "tooltip": false
-  },
-  "temperature": {
-    "thermal-zone": 3,
-    "critical-threshold": 80,
-    "interval": 5,
-    "format": " {temperatureC}°C"
   }
 }
