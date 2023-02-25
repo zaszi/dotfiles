@@ -14,29 +14,11 @@ require("bufferline").setup({
                 text_align = "left",
             },
         },
-        separator_style = "slant",
+        separator_style = "padded_slant",
         always_show_bufferline = true,
         show_buffer_close_icons = false,
         show_close_icon = false,
         diagnostics = "nvim_lsp",
-    },
-    highlights = {
-        fill = {
-            fg = "#282828",
-            bg = "#282828",
-        },
-        separator = {
-            fg = "#282828",
-            bg = "#282828",
-        },
-        separator_visible = {
-            fg = "#282828",
-            bg = "#282828",
-        },
-        separator_selected = {
-            fg = "#282828",
-            bg = "#282828",
-        },
     },
 })
 
