@@ -32,7 +32,6 @@ vim.defer_fn(function()
     require("core/wrap")
     require("core/fold")
     require("core/search")
-    require("core/layout")
     require("core/keymap")
 
     -- Load plugins with Packer.
@@ -67,6 +66,9 @@ vim.defer_fn(function()
     map("n", "<Leader>t", ":NvimTreeToggle<CR>")
 end, 0)
 
--- We do not defer loading nvim-tree (this executes before the above plugin
--- loads) due to a race condition with nvim-tree opening conditions.
+-- We do not defer loading layout or nvim-tree (this executes before the above
+-- plugin loads) due to a race condition with nvim-tree opening conditions or
+-- layout elements such as line numbers appearing in nvim-tree instead of the
+-- main buffer window.
+require("core/layout")
 require("extra/nvim-tree")
