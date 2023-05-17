@@ -63,7 +63,7 @@ require("lspconfig").lua_ls.setup({
 
 -- yamlls - Yaml Language Server
 require("lspconfig").yamlls.setup({
-    filetypes = { "yaml", "yaml.ansible" },
+    filetypes = { "yaml" },
     settings = {
         yaml = {
             schemas = {
