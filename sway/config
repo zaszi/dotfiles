@@ -33,11 +33,6 @@ set $screenshot_region grim -g "$(slurp)" ~/pictures/screenshots/$(date +%Y-%m-%
 # Set wallpaper directory
 set $wallpapers_path $HOME/pictures/wallpapers
 
-# The user instance of systemd does not inherit any of the environment
-# variables. This fixes that for pipewire. See:
-# https://github.com/emersion/xdg-desktop-portal-wlr/wiki/systemd-user-services,-pam,-and-environment-variables
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-
 # -----------------------------------------------------------------------------
 # OUTPUT
 # -----------------------------------------------------------------------------

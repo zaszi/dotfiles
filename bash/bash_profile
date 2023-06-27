@@ -33,8 +33,3 @@ fi
 # -----------------------------------------------------------------------------
 # ENVIRONMENT VARIABLES
 # -----------------------------------------------------------------------------
-
-# This has to be set before the compositor is started, for pipewire
-if command -v sway &>/dev/null; then
-    export XDG_CURRENT_DESKTOP=sway
-fi
