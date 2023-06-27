@@ -30,10 +30,6 @@ set $lock swaylock --color 000000 --ignore-empty-password --show-failed-attempts
 set $screenshot grim ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
 set $screenshot_region grim -g "$(slurp)" ~/pictures/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
 
-# Brightness increase and decrease
-set $brightness_up light -A 5 -s sysfs/backlight/intel_backlight
-set $brightness_down light -U 5 -s sysfs/backlight/intel_backlight
-
 # Set wallpaper directory
 set $wallpapers_path $HOME/pictures/wallpapers
 
