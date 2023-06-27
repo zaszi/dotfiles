@@ -89,6 +89,9 @@ for_window [title="wl-clipboard"] floating enable
 # Custom class for a central floating application launcher
 for_window [app_id="^launcher$"] floating enable, resize set width 25 ppt height 25 ppt
 
+# Custom class for Looking Glass
+for_window [app_id="looking-glass-client"] floating enable, resize set width 2560px height 1440px
+
 # Set our status bar
 bar {
     swaybar_command waybar
