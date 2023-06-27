@@ -39,7 +39,7 @@ return require("packer").startup(function(use)
         requires = {
             "sainnhe/gruvbox-material",
             "kyazdani42/nvim-web-devicons",
-            { "SmiteshP/nvim-gps", requires = { "nvim-treesitter/nvim-treesitter" } },
+            { "SmiteshP/nvim-navic", requires = { "nvim-treesitter/nvim-lspconfig" } },
         },
     })
 

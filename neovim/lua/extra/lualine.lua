@@ -4,8 +4,7 @@
 
 -- https://github.com/nvim-lualine/lualine.nvim
 
-local gps = require("nvim-gps")
-gps.setup()
+local navic = require("nvim-navic")
 
 require("lualine").setup({
     options = {
@@ -13,7 +12,12 @@ require("lualine").setup({
     },
     sections = {
         lualine_c = {
-            { gps.get_location, cond = gps.is_available },
+            {
+                function()
+                    return navic.get_location()
+                end,
+                cond = navic.is_available,
+            },
         },
     },
 })

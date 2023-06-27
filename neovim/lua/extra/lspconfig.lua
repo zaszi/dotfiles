@@ -26,6 +26,13 @@ vim.filetype.add({
     },
 })
 
+-- Automatically attach breadcrumb plugin so lualine can use it.
+require("nvim-navic").setup({
+    lsp = {
+        auto_attach = true,
+    },
+})
+
 -- ansiblels - Ansible Language Server
 require("lspconfig").ansiblels.setup({})
 
@@ -36,7 +43,7 @@ require("lspconfig").bashls.setup({})
 --
 -- rust-tools loads this for us, so we comment it out here.
 --require("lspconfig").rust_analyzer.setup({})
-
+--
 -- LuaLS - Lua Language Server
 require("lspconfig").lua_ls.setup({
     settings = {
