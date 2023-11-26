@@ -28,7 +28,6 @@ require("plugins")
 
 -- Load plugin configuration.
 require("extra/color")
-require("extra/lspconfig")
 require("extra/treesitter")
 require("extra/formatter")
 require("extra/lualine")
@@ -37,6 +36,9 @@ require("extra/neoscroll")
 require("extra/popui")
 require("extra/nvim-cmp")
 require("extra/gitsigns")
-require("extra/indent-blankline")
 require("extra/which-key")
 require("extra/bufferline")
+
+-- Load last due to race conditions with unrecognized globals.
+--require("../after/plugin/lspconfig")
+require("extra/lspconfig")

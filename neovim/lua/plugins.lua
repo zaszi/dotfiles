@@ -122,7 +122,12 @@ return require("packer").startup(function(use)
     use("b3nj5m1n/kommentary")
 
     -- Indentation guides - extra/indent-blankline.lua
-    use("lukas-reineke/indent-blankline.nvim")
+    use({
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("ibl").setup()
+        end,
+    })
 
     -- Keybinding help popup - extra/which-key.lua
     use("folke/which-key.nvim")

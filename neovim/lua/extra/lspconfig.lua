@@ -5,10 +5,10 @@
 -- https://github.com/neovim/nvim-lspconfig
 
 -- Use font symbols instead of boring letters.
-vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
-vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
-vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInformation" })
-vim.fn.sign_define("DiagnosticSignHint", { text = " ", texthl = "DiagnosticSignHint" })
+vim.fn.sign_define("DiagnosticSignError", { text = "", texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = "", texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = "", texthl = "DiagnosticSignInformation" })
+vim.fn.sign_define("DiagnosticSignHint", { text = "", texthl = "DiagnosticSignHint" })
 
 -- ansiblels expects the `yaml.ansible` filetype, which we have to set
 -- ourselves first.
@@ -43,7 +43,7 @@ require("lspconfig").bashls.setup({})
 --
 -- rust-tools loads this for us, so we comment it out here.
 --require("lspconfig").rust_analyzer.setup({})
---
+
 -- LuaLS - Lua Language Server
 require("lspconfig").lua_ls.setup({
     settings = {
@@ -60,8 +60,8 @@ require("lspconfig").lua_ls.setup({
                 -- Make the server aware of Neovim runtime files.
                 library = vim.api.nvim_get_runtime_file("", true),
             },
-            -- Do not send telemetry data containing a randomized but unique identifier.
             telemetry = {
+                -- Do not send telemetry data containing a randomized but unique identifier.
                 enable = false,
             },
         },

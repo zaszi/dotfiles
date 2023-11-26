@@ -3,7 +3,7 @@
 -- +--------------------------------------------------------------------------+
 
 -- Set GUI font.
-vim.o.guifont = "Iosevka NFM"
+vim.o.guifont = "Iosevka NF"
 
 vim.opt.title = true -- Set title instead of term inheritance.
 vim.opt.number = true -- Enable line numbers.
