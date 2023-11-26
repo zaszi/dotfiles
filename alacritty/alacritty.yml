@@ -4,16 +4,16 @@ env:
 
 font:
   normal:
-    family: Iosevka NFM
+    family: Iosevka NF
     style: Regular
   bold:
-    family: Iosevka NFM
+    family: Iosevka NF
     style: Bold
   italic:
-    family: Iosevka NFM
+    family: Iosevka NF
     style: Italic
   bold_italic:
-    family: Iosevka NFM
+    family: Iosevka NF
     style: Bold Italic
   size: 12.0
 
