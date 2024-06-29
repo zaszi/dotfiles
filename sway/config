@@ -1,4 +1,9 @@
-include /etc/sway/config.d/*
+# -----------------------------------------------------------------------------
+# GENERAL
+# -----------------------------------------------------------------------------
+
+# Set up for xdg-desktop-portal-wlr
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 # -----------------------------------------------------------------------------
 # VARIABLES
@@ -214,3 +219,11 @@ bindsym XF86AudioNext exec playerctl next
 
 # Host-specific configuration - Deploy with Ansible
 {{ sway_host_config }}
+
+
+# -----------------------------------------------------------------------------
+# INCLUDE
+# -----------------------------------------------------------------------------
+
+# Import drop-in configuration files
+include /etc/sway/config.d/*
