@@ -146,6 +146,11 @@ if command -v nvim &>/dev/null; then
     alias vim="nvim"
 fi
 
+# Pacdiff needs a reminder as per above
+if command -v pacdiff &>/dev/null; then
+    alias pacdiff="DIFFPROG=/usr/bin/nvim pacdiff"
+fi
+
 # An interactive AUR installation command using yay
 if command -v yay &>/dev/null && command -v fzf &>/dev/null; then
     alias fay="yay -Slq | fzf -m --preview 'yay -Si {1}'| xargs -ro yay -S"
